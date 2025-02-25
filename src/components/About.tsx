@@ -1,233 +1,179 @@
+import { 
+  DiJava,
+  DiJavascript1,
+  DiPython,
+  DiReact,
+  DiGit,
+  DiDocker
+} from 'react-icons/di';
+import {
+  SiCplusplus,
+  SiKotlin,
+  SiSwift,
+  SiBlockchaindotcom
+} from 'react-icons/si';
+
 export default function About() {
   return (
     <>
       <section className="about-text">
         <p>
-          I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-          I enjoy turning complex problems into simple, beautiful and intuitive designs.
+          I am a Master's student in Computer Science (MSCS) at the University of California, Santa Barbara (UCSB), specializing in full-stack development, mobile application development, and the exploration of artificial intelligence and blockchain technologies. I am passionate about creating value through technology and firmly believe in the power of software to change the world.
         </p>
-
         <p>
-          My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-          Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use.
-          My aim is to bring across your message and identity in the most creative way.
-          I created web design for many famous brand companies.
+          I aspire to join an innovative team to build impactful products that bring positive change to users worldwide.
         </p>
       </section>
 
-      <section className="service">
-        <h3 className="h3 service-title">What I'm doing</h3>
+      <section className="timeline">
+        <div className="title-wrapper">
+          <h3 className="h3">Education</h3>
+        </div>
 
-        <ul className="service-list">
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-design.svg"
-                alt="design icon"
-                width="40"
+        <ol className="timeline-list">
+          <li className="timeline-item">
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+              <img 
+                src="/assets/images/ucsb.png" 
+                alt="UCSB Logo" 
+                style={{ 
+                  width: '50px', 
+                  height: '50px', 
+                  objectFit: 'contain',
+                  borderRadius: '50%',
+                  backgroundColor: 'white'
+                }} 
               />
-            </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '50px' }}>
+                  <h4 className="h4 timeline-item-title">University of California, Santa Barbara</h4>
+                  <span>2024.09 — 2026.07</span>
+                </div>
 
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Web design</h4>
-              <p className="service-item-text">
-                The most modern and high-quality design made at a professional level.
-              </p>
+                <p className="timeline-text">
+                  Master of Science, Computer Science
+                </p>
+              </div>
             </div>
           </li>
 
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-dev.svg"
-                alt="Web development icon"
-                width="40"
+          <li className="timeline-item">
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+              <img 
+                src="/assets/images/NJU.png" 
+                alt="Nanjing University Logo" 
+                style={{ 
+                  width: '50px', 
+                  height: '50px', 
+                  objectFit: 'contain',
+                  borderRadius: '10%',
+                  backgroundColor: 'white'
+                }} 
               />
-            </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '50px' }}>
+                  <h4 className="h4 timeline-item-title">Nanjing University</h4>
+                  <span>2020.09 — 2024.07</span>
+                </div>
 
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Web development</h4>
-              <p className="service-item-text">
-                High-quality development of sites at the professional level.
-              </p>
+                <p className="timeline-text">
+                  Bachelor of Science, Computer Science
+                </p>
+              </div>
             </div>
           </li>
-
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-app.svg"
-                alt="mobile app icon"
-                width="40"
-              />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Mobile apps</h4>
-              <p className="service-item-text">
-                Professional development of applications for iOS and Android.
-              </p>
-            </div>
-          </li>
-
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-photo.svg"
-                alt="camera icon"
-                width="40"
-              />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Photography</h4>
-              <p className="service-item-text">
-                I make high-quality photos of any category at a professional level.
-              </p>
-            </div>
-          </li>
-        </ul>
+        </ol>
       </section>
 
-      <section className="testimonials">
-        <h3 className="h3 testimonials-title">Testimonials</h3>
+      <section className="timeline">
+        <div className="title-wrapper">
+          <h3 className="h3">Experience</h3>
+        </div>
 
-        <ul className="testimonials-list has-scrollbar">
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-              <figure className="testimonials-avatar-box">
-                <img
-                  src="/assets/images/avatar-1.png"
-                  alt="Daniel lewis"
-                  width="60"
-                  data-testimonials-avatar
-                />
-              </figure>
+        <ol className="timeline-list">
+          <li className="timeline-item">
+            <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '20px' }}>
+              <img 
+                src="/assets/images/LF.png" 
+                alt="Linux Foundation Logo" 
+                style={{ 
+                  width: '50px', 
+                  height: '50px', 
+                  objectFit: 'contain',
+                  borderRadius: '10%',
+                  backgroundColor: 'white'
+                }} 
+              />
 
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>
-                Daniel lewis
-              </h4>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '50px' }}>
+                  <h4 className="h4 timeline-item-title">The Linux Foundation</h4>
+                  <span>2024.05 — 2024.12</span>
+                </div>
 
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience and is very concerned about the needs of client.
+                <p className="timeline-text">
+                  Software Engineer Intern
                 </p>
               </div>
             </div>
           </li>
-
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-              <figure className="testimonials-avatar-box">
-                <img
-                  src="/assets/images/avatar-2.png"
-                  alt="Jessica miller"
-                  width="60"
-                  data-testimonials-avatar
-                />
-              </figure>
-
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>
-                Jessica miller
-              </h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience and is very concerned about the needs of client.
-                </p>
-              </div>
-            </div>
-          </li>
-
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-              <figure className="testimonials-avatar-box">
-                <img
-                  src="/assets/images/avatar-3.png"
-                  alt="Emily evans"
-                  width="60"
-                  data-testimonials-avatar
-                />
-              </figure>
-
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>
-                Emily evans
-              </h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience and is very concerned about the needs of client.
-                </p>
-              </div>
-            </div>
-          </li>
-
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-              <figure className="testimonials-avatar-box">
-                <img
-                  src="/assets/images/avatar-4.png"
-                  alt="Henry william"
-                  width="60"
-                  data-testimonials-avatar
-                />
-              </figure>
-
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>
-                Henry william
-              </h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience and is very concerned about the needs of client.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
+        </ol>
       </section>
 
-      <div className="modal-container" data-modal-container>
-        <div className="overlay" data-overlay></div>
+      <section className="timeline">
+        <div className="title-wrapper">
+          <h3 className="h3">Tech Skills</h3>
+        </div>
 
-        <section className="testimonials-modal">
-          <button className="modal-close-btn" data-modal-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
-          </button>
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+          gap: '15px',
+          padding: '20px 0'
+        }}>
+          {[
+            { name: 'C++', Icon: SiCplusplus },
+            { name: 'Java', Icon: DiJava },
+            { name: 'JavaScript', Icon: DiJavascript1 },
+            { name: 'Python', Icon: DiPython },
+            { name: 'React', Icon: DiReact },
+            { name: 'Kotlin', Icon: SiKotlin },
+            { name: 'Swift', Icon: SiSwift },
+            { name: 'Blockchain', Icon: SiBlockchaindotcom },
+            { name: 'Docker', Icon: DiDocker },
+            { name: 'Git', Icon: DiGit }
+          ].map(({ name, Icon }) => {
+            const cardStyle = {
+              backgroundColor: 'var(--border-gradient-onyx)',
+              borderRadius: '8px',
+              padding: '15px',
+              display: 'flex',
+              flexDirection: 'column' as const,
+              alignItems: 'center',
+              gap: '10px',
+              transition: 'transform 0.3s ease',
+              cursor: 'pointer',
+              ':hover': {
+                transform: 'translateY(-5px)'
+              }
+            };
 
-          <div className="modal-img-wrapper">
-            <figure className="modal-avatar-box">
-              <img
-                src="/assets/images/avatar-1.png"
-                alt="Daniel lewis"
-                width="80"
-                data-modal-img
-              />
-            </figure>
+            const textStyle = {
+              fontSize: '14px',
+              fontWeight: 'var(--fw-500)',
+              color: 'var(--light-gray)'
+            };
 
-            <img src="/assets/images/icon-quote.svg" alt="quote icon" />
-          </div>
+            return (
+              <div key={name} style={cardStyle}>
+                <Icon size={24} />
+                <span style={textStyle}>{name}</span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
-          <div className="modal-content">
-            <h4 className="h3 modal-title" data-modal-title>
-              Daniel lewis
-            </h4>
-
-            <time dateTime="2021-06-14">14 June, 2021</time>
-
-            <div data-modal-text>
-              <p>
-                Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                lot of experience and is very concerned about the needs of client.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
     </>
   );
 }

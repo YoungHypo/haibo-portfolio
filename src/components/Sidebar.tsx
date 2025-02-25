@@ -1,10 +1,27 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Sidebar() {
   const [showContacts, setShowContacts] = useState(false);
+  const [currentTime, setCurrentTime] = useState('');
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setCurrentTime(now.toLocaleTimeString('en-US', { 
+        timeZone: 'America/Los_Angeles',
+        hour: '2-digit',
+        minute: '2-digit'
+      }));
+    };
+
+    updateTime();
+    const timer = setInterval(updateTime, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <aside className="sidebar" data-sidebar>
@@ -21,7 +38,9 @@ export default function Sidebar() {
 
         <div className="info-content">
           <h1 className="name" title="Haibo Yang">Haibo Yang</h1>
-          <p className="title">Software Engineer</p>
+          <p className="title">MSCS Student</p>
+          <p className="specialties">Full-Stack & Mobile Dev</p>
+          <p className="specialties">AI & Blockchain</p>
         </div>
 
         <button 
@@ -37,51 +56,15 @@ export default function Sidebar() {
       <div className={`sidebar-info_more ${showContacts ? 'active' : ''}`}>
         <div className="separator"></div>
 
-        <ul className="contacts-list">
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Email</p>
-              <a href="mailto:haiboyang@ucsb.edu" className="contact-link">haiboyang@ucsb.edu</a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Phone</p>
-              <a href="tel:+12133522795" className="contact-link">+1 (213) 352-2795</a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Birthday</p>
-              <time dateTime="1982-06-23">June 23, 1982</time>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Location</p>
-              <address>Santa Barbara, California, USA</address>
-            </div>
-          </li>
-        </ul>
+        <div className="location-info">
+          <div className="location-line">
+            <ion-icon name="location-outline"></ion-icon>
+            <span>Santa Barbara, CA</span>
+          </div>
+          <div className="time-line">
+            <span>{currentTime} PST</span>
+          </div>
+        </div>
 
         <div className="separator"></div>
 

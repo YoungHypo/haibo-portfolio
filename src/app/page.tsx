@@ -4,11 +4,10 @@ import { useState } from 'react';
 import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
-import Resume from '@/components/Resume';
 import Portfolio from '@/components/Portfolio';
 import Script from 'next/script';
 
-type ActivePage = 'About' | 'Resume' | 'Portfolio' | 'Blog' | 'Contact';
+type ActivePage = 'About' | 'Portfolio' | 'Blog' | 'Contact';
 
 export default function Home() {
   const [activePage, setActivePage] = useState<ActivePage>('About');
@@ -27,14 +26,6 @@ export default function Home() {
             </header>
 
             <About />
-          </article>
-
-          <article className={`resume ${activePage === 'Resume' ? 'active' : ''}`} data-page="resume">
-            <header>
-              <h2 className="h2 article-title">Resume</h2>
-            </header>
-
-            <Resume />
           </article>
 
           <article className={`portfolio ${activePage === 'Portfolio' ? 'active' : ''}`} data-page="portfolio">
