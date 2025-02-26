@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "HaiboYang Website",
-  description: "Personal portfolio and resume website",
+  description: "Personal portfolio and resume website"
 };
 
 export default function RootLayout({
