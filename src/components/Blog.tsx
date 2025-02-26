@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Blog() {
   const blogPosts = [
     {
@@ -52,7 +54,14 @@ export default function Blog() {
           <li key={index} className="blog-post-item">
             <a href="#">
               <figure className="blog-banner-box">
-                <img src={post.image} alt={post.title} loading="lazy" />
+                <Image 
+                  src={post.image} 
+                  alt={post.title} 
+                  width={300}
+                  height={200}
+                  style={{ width: '100%', height: 'auto' }}
+                  loading="lazy" 
+                />
               </figure>
 
               <div className="blog-content">

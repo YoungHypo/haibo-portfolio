@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import { AiOutlineEye } from 'react-icons/ai';
 
 type Category = 'all' | 'Mobile' | 'Web' | 'Open Source' | 'FullStack';
 
@@ -105,10 +107,17 @@ export default function Portfolio() {
               <a href={project.link}>
                 <figure className="project-img">
                   <div className="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <AiOutlineEye />
                   </div>
 
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    width={300}
+                    height={200}
+                    style={{ width: '100%', height: 'auto' }}
+                    loading="lazy" 
+                  />
                 </figure>
 
                 <h3 className="project-title">{project.title}</h3>
