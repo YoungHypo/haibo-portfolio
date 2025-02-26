@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-type NavItem = 'About' | 'Portfolio' | 'Blog' | 'Resume';
+type NavItem = 'About' | 'Portfolio' | 'Blog';
 
 export default function Navbar({ onNavChange }: { onNavChange: (item: NavItem) => void }) {
   const [activeItem, setActiveItem] = useState<NavItem>('About');
@@ -15,7 +15,7 @@ export default function Navbar({ onNavChange }: { onNavChange: (item: NavItem) =
   return (
     <nav className="navbar">
       <ul className="navbar-list">
-        {(['About', 'Portfolio', 'Blog', 'Resume'] as NavItem[]).map((item) => (
+        {(['About', 'Portfolio', 'Blog'] as NavItem[]).map((item) => (
           <li key={item} className="navbar-item">
             <button
               className={`navbar-link ${activeItem === item ? 'active' : ''}`}

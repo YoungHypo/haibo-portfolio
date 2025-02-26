@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "vCard - Personal Portfolio",
+  title: "HaiboYang Website",
   description: "Personal portfolio and resume website",
 };
 
