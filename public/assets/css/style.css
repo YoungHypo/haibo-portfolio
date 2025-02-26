@@ -516,28 +516,22 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: var(--border-gradient-onyx);
+  background: var(--bg-gradient-yellow-1);
   padding: 15px 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
   transition: var(--transition-1);
+  border-radius: 0 20px 0 20px;
 }
 
 .navbar::before {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
+  background: var(--bg-gradient-yellow-2);
   z-index: -1;
   transition: var(--transition-1);
-}
-
-.navbar:hover {
-  background: var(--bg-gradient-yellow-1);
-}
-
-.navbar:hover::before {
-  background: var(--bg-gradient-yellow-2);
+  border-radius: 0 20px 0 20px;
 }
 
 .navbar-list {
@@ -550,7 +544,7 @@ main {
 }
 
 .navbar-link {
-  color: hsla(57, 58%, 88%, 0.656);
+  color: rgb(93, 93, 91);
   font-size: var(--fs-8);
   padding: 10px;
   transition: color var(--transition-1);
@@ -558,11 +552,11 @@ main {
 
 .navbar-link:hover,
 .navbar-link:focus { 
-  color: var(--orange-yellow-crayola);
+  color: hsla(57, 58%, 88%, 0.656);
 }
 
 .navbar-link.active { 
-  color: hsl(0, 0%, 100%);
+  color: var(--orange-yellow-crayola);
   font-weight: var(--fw-500);
 }
 
