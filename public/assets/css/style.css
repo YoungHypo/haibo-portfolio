@@ -30,9 +30,9 @@
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(0, 0%, 100%, 0.251) 0%, 
-    hsla(0, 0%, 100%, 0) 100%
-  ), hsl(0, 0%, 100%);
+    hsla(0, 0%, 0%, 0.1) 0%, 
+    hsla(0, 0%, 0%, 0.05) 100%
+  ), hsl(0, 0%, 98%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
     hsl(45, 100%, 71%) 0%, 
@@ -56,13 +56,13 @@
 
   /* solid */
 
-  --jet: hsl(0, 0%, 100%);
-  --onyx: hsl(0, 0%, 98%);
-  --eerie-black-1: hsl(0, 0%, 100%);
-  --eerie-black-2: hsl(0, 0%, 98%);
+  --jet: hsl(0, 0%, 90%);
+  --onyx: hsl(0, 0%, 95%);
+  --eerie-black-1: hsl(0, 0%, 98%);
+  --eerie-black-2: hsl(0, 0%, 95%);
   --smoky-black: hsl(0, 0%, 100%);
-  --white-1: hsl(0, 0%, 0%);
-  --white-2: hsl(0, 0%, 10%);
+  --white-1: hsl(0, 0%, 20%);
+  --white-2: hsl(0, 0%, 30%);
   --orange-yellow-crayola: hsl(45, 100%, 50%);
   --vegas-gold: hsl(45, 54%, 40%);
   --light-gray: hsl(0, 0%, 20%);
@@ -96,11 +96,11 @@
    * shadow
    */
   
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.1);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.1);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.1);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.05);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.05);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.05);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.1);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.15);
 
   /**
    * transition
@@ -516,12 +516,28 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
-  border-radius: 12px 12px 0 0;
+  background: var(--border-gradient-onyx);
+  padding: 15px 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
+  transition: var(--transition-1);
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.navbar:hover {
+  background: var(--bg-gradient-yellow-1);
+}
+
+.navbar:hover::before {
+  background: var(--bg-gradient-yellow-2);
 }
 
 .navbar-list {
@@ -529,20 +545,26 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding-inline: 15px;
+  gap: 15px;
 }
 
 .navbar-link {
-  color: var(--light-gray);
+  color: hsla(57, 58%, 88%, 0.656);
   font-size: var(--fs-8);
-  padding: 20px 7px;
+  padding: 10px;
   transition: color var(--transition-1);
 }
 
 .navbar-link:hover,
-.navbar-link:focus { color: var(--light-gray-70); }
+.navbar-link:focus { 
+  color: var(--orange-yellow-crayola);
+}
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active { 
+  color: hsl(0, 0%, 100%);
+  font-weight: var(--fw-500);
+}
 
 
 
@@ -1584,7 +1606,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .form-btn ion-icon { font-size: 18px; }
 
-}
+
 
 
 

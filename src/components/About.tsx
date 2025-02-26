@@ -3,14 +3,21 @@ import {
   DiJavascript1,
   DiPython,
   DiReact,
-  DiGit,
-  DiDocker
+  DiDocker,
+  DiRuby,
+  DiMysql,
+
 } from 'react-icons/di';
 import {
   SiCplusplus,
   SiKotlin,
   SiSwift,
-  SiBlockchaindotcom
+  SiDjango,
+  SiSolidity,
+  SiTensorflow,
+  SiRuby,
+  SiSpringboot,
+  SiPytorch
 } from 'react-icons/si';
 
 export default function About() {
@@ -127,21 +134,29 @@ export default function About() {
 
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))',
           gap: '15px',
-          padding: '20px 0'
+          marginTop: '-15px',
+          marginLeft: '-10px',
+          marginRight: '40px'
         }}>
           {[
             { name: 'C++', Icon: SiCplusplus },
+            { name: 'Python', Icon: DiPython },
             { name: 'Java', Icon: DiJava },
             { name: 'JavaScript', Icon: DiJavascript1 },
-            { name: 'Python', Icon: DiPython },
-            { name: 'React', Icon: DiReact },
-            { name: 'Kotlin', Icon: SiKotlin },
             { name: 'Swift', Icon: SiSwift },
-            { name: 'Blockchain', Icon: SiBlockchaindotcom },
+            { name: 'Kotlin', Icon: SiKotlin },
+            { name: 'Ruby', Icon: DiRuby },
+            { name: 'Solidity', Icon: SiSolidity },
+            { name: 'React', Icon: DiReact },
+            { name: 'MySQL', Icon: DiMysql },
+            { name: 'SpringBoot', Icon: SiSpringboot },
+            { name: 'Django', Icon: SiDjango },
             { name: 'Docker', Icon: DiDocker },
-            { name: 'Git', Icon: DiGit }
+            { name: 'TensorFlow', Icon: SiTensorflow },
+            { name: 'Pytorch', Icon: SiPytorch },
+            { name: 'Rails', Icon: SiRuby }
           ].map(({ name, Icon }) => {
             const cardStyle = {
               backgroundColor: 'var(--border-gradient-onyx)',
@@ -150,7 +165,7 @@ export default function About() {
               display: 'flex',
               flexDirection: 'column' as const,
               alignItems: 'center',
-              gap: '10px',
+              gap: '5px',
               transition: 'transform 0.3s ease',
               cursor: 'pointer',
               ':hover': {
