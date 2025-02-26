@@ -18,7 +18,7 @@ export default function Navbar({ onNavChange }: { onNavChange: (item: NavItem) =
         {(['About', 'Portfolio', 'Blog'] as NavItem[]).map((item) => (
           <li key={item} className="navbar-item">
             <button
-              className={`navbar-link ${activeItem === item ? 'active' : ''}`}
+              className={`navbar-link ${activeItem === item ? 'active' : ''} !text-base`}
               onClick={() => handleNavClick(item)}
               data-nav-link
             >

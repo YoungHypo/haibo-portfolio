@@ -39,7 +39,7 @@ export default function Sidebar() {
           />
         </figure>
 
-        <div className="info-content">
+        <div className="info-content text-center">
           <h1 className="name" title="Haibo Yang">Haibo Yang</h1>
           <p className="title">MSCS Student</p>
           <p className="specialties">Full-Stack & Mobile Dev</p>
