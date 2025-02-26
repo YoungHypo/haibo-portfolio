@@ -5,9 +5,11 @@ import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Portfolio from '@/components/Portfolio';
+import Resume from '@/components/Resume';
+import Blog from '@/components/Blog';
 import Script from 'next/script';
 
-type ActivePage = 'About' | 'Portfolio' | 'Blog' | 'Contact';
+type ActivePage = 'About' | 'Portfolio' | 'Blog' | 'Resume';
 
 export default function Home() {
   const [activePage, setActivePage] = useState<ActivePage>('About');
@@ -41,15 +43,15 @@ export default function Home() {
               <h2 className="h2 article-title">Blog</h2>
             </header>
 
-            {/* Blog content will go here */}
+            <Blog />
           </article>
 
-          <article className={`contact ${activePage === 'Contact' ? 'active' : ''}`} data-page="contact">
+          <article className={`resume ${activePage === 'Resume' ? 'active' : ''}`} data-page="resume">
             <header>
-              <h2 className="h2 article-title">Contact</h2>
+              <h2 className="h2 article-title">Resume</h2>
             </header>
 
-            {/* Contact content will go here */}
+            <Resume />
           </article>
         </div>
       </main>

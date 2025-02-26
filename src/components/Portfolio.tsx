@@ -2,65 +2,39 @@
 
 import { useState } from 'react';
 
-type Category = 'all' | 'web development' | 'applications' | 'web design';
+type Category = 'all' | 'Mobile' | 'Web' | 'Open Source' | 'FullStack';
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
 
   const projects = [
     {
-      category: 'web development',
-      image: '/assets/images/project-1.jpg',
-      title: 'Finance',
-      description: 'Web development'
+      category: 'Open Source',
+      image: '/assets/images/cello.png',
+      title: 'Cello',
+      description: 'Hyperledger Foundation',
+      link: 'https://github.com/hyperledger-cello/cello'
     },
     {
-      category: 'web development',
-      image: '/assets/images/project-2.jpg',
-      title: 'Orizon',
-      description: 'Web development'
+      category: 'FullStack',
+      image: '/assets/images/Tweet.png',
+      title: 'Tweet',
+      description: 'Next.js & Rails',
+      link: 'https://github.com/YoungHypo/Tweet'
     },
     {
-      category: 'web design',
-      image: '/assets/images/project-3.jpg',
-      title: 'Fundo',
-      description: 'Web design'
+      category: 'Mobile',
+      image: '/assets/images/SignQuest.png',
+      title: 'SignQuest',
+      description: 'WWDC2025 Submission',
+      link: 'https://github.com/YoungHypo/SignQuest'
     },
     {
-      category: 'applications',
-      image: '/assets/images/project-4.jpg',
-      title: 'Brawlhalla',
-      description: 'Applications'
-    },
-    {
-      category: 'web design',
-      image: '/assets/images/project-5.jpg',
-      title: 'DSM.',
-      description: 'Web design'
-    },
-    {
-      category: 'web design',
-      image: '/assets/images/project-6.jpg',
-      title: 'MetaSpark',
-      description: 'Web design'
-    },
-    {
-      category: 'web development',
-      image: '/assets/images/project-7.jpg',
-      title: 'Summary',
-      description: 'Web development'
-    },
-    {
-      category: 'applications',
-      image: '/assets/images/project-8.jpg',
-      title: 'Task Manager',
-      description: 'Applications'
-    },
-    {
-      category: 'web design',
-      image: '/assets/images/project-9.jpg',
-      title: 'Arrival',
-      description: 'Web design'
+      category: 'Mobile',
+      image: '/assets/images/Homelette.png',
+      title: 'Homelette',
+      description: 'React Native & Firebase',
+      link: 'https://github.com/YoungHypo/team14sublet'
     }
   ];
 
@@ -79,31 +53,41 @@ export default function Portfolio() {
 
         <li className="filter-item">
           <button
-            className={activeCategory === 'web development' ? 'active' : ''}
-            onClick={() => setActiveCategory('web development')}
+            className={activeCategory === 'Mobile' ? 'active' : ''}
+            onClick={() => setActiveCategory('Mobile')}
             data-filter-btn
           >
-            Web Development
+            Mobile
           </button>
         </li>
 
         <li className="filter-item">
           <button
-            className={activeCategory === 'applications' ? 'active' : ''}
-            onClick={() => setActiveCategory('applications')}
+            className={activeCategory === 'Web' ? 'active' : ''}
+            onClick={() => setActiveCategory('Web')}
             data-filter-btn
           >
-            Applications
+            Web
           </button>
         </li>
 
         <li className="filter-item">
           <button
-            className={activeCategory === 'web design' ? 'active' : ''}
-            onClick={() => setActiveCategory('web design')}
+            className={activeCategory === 'FullStack' ? 'active' : ''}
+            onClick={() => setActiveCategory('FullStack')}
             data-filter-btn
           >
-            Web Design
+            FullStack
+          </button>
+        </li>
+
+        <li className="filter-item">
+          <button
+            className={activeCategory === 'Open Source' ? 'active' : ''}
+            onClick={() => setActiveCategory('Open Source')}
+            data-filter-btn
+          >
+            Open Source
           </button>
         </li>
       </ul>
@@ -118,7 +102,7 @@ export default function Portfolio() {
               data-filter-item
               data-category={project.category}
             >
-              <a href="#">
+              <a href={project.link}>
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>

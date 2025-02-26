@@ -46,6 +46,7 @@ export default function Blog() {
 
   return (
     <section className="blog-posts">
+      <p>Not available yet</p>
       <ul className="blog-posts-list">
         {blogPosts.map((post, index) => (
           <li key={index} className="blog-post-item">

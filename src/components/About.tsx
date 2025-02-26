@@ -25,10 +25,10 @@ export default function About() {
     <>
       <section className="about-text">
         <p>
-          I am a Master's student in Computer Science (MSCS) at the University of California, Santa Barbara (UCSB), specializing in full-stack development, mobile application development, and the exploration of artificial intelligence and blockchain technologies. I am passionate about creating value through technology and firmly believe in the power of software to change the world.
+          I am a <strong>Master's student in Computer Science</strong> 🎓 at the University of California, Santa Barbara 🌴, specializing in <strong>full-stack</strong> 💻, <strong>mobile application</strong> 📱, <strong>AI</strong> 🤖, and <strong>blockchain</strong> ⛓️. I am passionate about creating value through technology and firmly believe in the power of software to change the world 🌍.
         </p>
         <p>
-          I aspire to join an innovative team to build impactful products that bring positive change to users worldwide.
+          I aspire to become a <strong>software engineer</strong> 👨‍💻 and join an innovative team to build impactful products ✨ that bring positive change to users worldwide 🚀.
         </p>
       </section>
 
@@ -137,7 +137,7 @@ export default function About() {
           gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))',
           gap: '15px',
           marginTop: '-15px',
-          marginLeft: '-10px',
+          marginLeft: '-5px',
           marginRight: '40px'
         }}>
           {[

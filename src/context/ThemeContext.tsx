@@ -17,7 +17,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    // 初始化时设置 light 主题的类名
+    // initialize with light theme
     document.documentElement.classList.add('light');
   }, []);
 
